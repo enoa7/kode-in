@@ -6,7 +6,8 @@
 <div class="site-content">
 	<div class="container">
 		<div class="site-logo">
-			
+			<!-- <img src="/kode-in/img/kodein-logo.svg" alt="logo - KodeIn"> -->
+			<?php echo file_get_contents('/img/kodein-logo.svg'); ?>
 		</div>
 	</div>
 </div>

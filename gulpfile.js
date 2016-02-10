@@ -29,8 +29,8 @@ gulp.task('sass', function() {
 
 gulp.task('watch', function() {
     plugins.livereload.listen();
-    gulp.watch(contentPath + '/sass/**/*.sass', ['sass']);
-    gulp.watch(contentPath + '/sass/*.sass', ['sass']);
+    gulp.watch(contentPath + '/sass/**/*.scss', ['sass']);
+    gulp.watch(contentPath + '/sass/*.scss', ['sass']);
 });
 
 gulp.task('default', ['sass', 'watch']);

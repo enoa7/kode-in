@@ -5759,3 +5759,12 @@ button.close {
 @media print {
   .hidden-print {
     display: none !important; } }
+
+/*--------------------------------------------------------------
+# Under Construction 
+--------------------------------------------------------------*/
+html, body {
+  background: #1a459a; }
+
+#kodein-logo {
+  fill: #fff; }
