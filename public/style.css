@@ -3,8 +3,45 @@
  * Main SCSS Files
  * ================== */
 /*--------------------------------------------------------------
+# import mixins
+--------------------------------------------------------------*/
+/* ========================================================
+ * replacing media queries
+ * format: @include breakpoint(['xs','md', or 'lg'])
+ * ======================================================== */
+/* ========================================================
+ * FONT FACE
+ * format: @include font-face($fontname, $fontpath)
+ * ======================================================== */
+/* ========================================================
+ * calculate rem size based on px size
+ * ======================================================== */
+/*--------------------------------------------------------------
 # import variables
 --------------------------------------------------------------*/
+/* 
+ * import all the necessary font with font-face mixin
+ */
+@font-face {
+  font-family: "gotham-med";
+  src: url("../fonts/gotham-medium.eot?") format("eot"), url("../fonts/gotham-medium.woff2") format("woff2"), url("../fonts/gotham-medium.woff") format("woff"), url("../fonts/gotham-medium.ttf") format("truetype"), url('../fonts/gotham-medium.svg#str-replace(gotham-med, " ", "_")') format("svg"); }
+
+@font-face {
+  font-family: "gotham-light";
+  src: url("../fonts/gotham-light.eot?") format("eot"), url("../fonts/gotham-light.woff2") format("woff2"), url("../fonts/gotham-light.woff") format("woff"), url("../fonts/gotham-light.ttf") format("truetype"), url('../fonts/gotham-light.svg#str-replace(gotham-light, " ", "_")') format("svg"); }
+
+@font-face {
+  font-family: "gotham-bold";
+  src: url("../fonts/gotham-bold.eot?") format("eot"), url("../fonts/gotham-bold.woff2") format("woff2"), url("../fonts/gotham-bold.woff") format("woff"), url("../fonts/gotham-bold.ttf") format("truetype"), url('../fonts/gotham-bold.svg#str-replace(gotham-bold, " ", "_")') format("svg"); }
+
+@font-face {
+  font-family: "gotham-thin";
+  src: url("../fonts/gotham-thin.eot?") format("eot"), url("../fonts/gotham-thin.woff2") format("woff2"), url("../fonts/gotham-thin.woff") format("woff"), url("../fonts/gotham-thin.ttf") format("truetype"), url('../fonts/gotham-thin.svg#str-replace(gotham-thin, " ", "_")') format("svg"); }
+
+@font-face {
+  font-family: "gotham";
+  src: url("../fonts/gotham-book.eot?") format("eot"), url("../fonts/gotham-book.woff2") format("woff2"), url("../fonts/gotham-book.woff") format("woff"), url("../fonts/gotham-book.ttf") format("truetype"), url('../fonts/gotham-book.svg#str-replace(gotham, " ", "_")') format("svg"); }
+
 /*--------------------------------------------------------------
 # import bootstrap from node_modules
 --------------------------------------------------------------*/
@@ -5761,11 +5798,30 @@ button.close {
     display: none !important; } }
 
 /*--------------------------------------------------------------
+# import navigation
+--------------------------------------------------------------*/
+.site-logo svg {
+  fill: #fff; }
+
+/*--------------------------------------------------------------
 # Under Construction 
 --------------------------------------------------------------*/
-html, body {
+html,
+body {
   background: #1a459a; }
 
-.site-logo svg {
-  fill: #fff;
-  width: 600px; }
+.site-content > .custom-container {
+  max-width: 600px;
+  color: #fff;
+  margin: 0 auto;
+  color: #1a459a;
+  background-color: #fff;
+  text-align: center;
+  padding-top: 10px;
+  padding-bottom: 10px; }
+  .site-content > .custom-container > .title {
+    margin: 0;
+    font-family: gotham-med; }
+
+.site-footer .copyright {
+  text-align: center; }

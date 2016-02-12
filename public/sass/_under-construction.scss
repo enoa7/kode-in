@@ -1,0 +1,26 @@
+html,
+body {
+    background: $color__background-body;
+}
+
+.site-content {
+    > .custom-container {
+        max-width: 600px;
+        color: #fff;
+        margin: 0 auto;
+        color: $color__main;
+        background-color: #fff;
+        text-align: center;
+        @include spacepad(10px);
+        > .title {
+        	margin: 0;
+        	font-family: gotham-med;
+        }
+    }
+}
+
+.site-footer {
+	.copyright {
+		text-align: center;
+	}
+}
