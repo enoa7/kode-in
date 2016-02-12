@@ -1,11 +1,18 @@
 /* ===============================================
  * GULP VARIABLES
  * =============================================== */
+
+ // require gulp
 var gulp = require('gulp');
+
+/* use gulp-load-plugins to easily access the plugins
+so we don't have to declare the plugins one by one */
 var plugins = require("gulp-load-plugins")({
     pattern: ['gulp-*', 'gulp.*'],
     replaceString: /\bgulp[\-.]/
 });
+
+/* create an error message */
 var plumberErrorHandler = {
     errorHandler: plugins.notify.onError({
         title: 'Gulp',
@@ -13,10 +20,13 @@ var plumberErrorHandler = {
     })
 };
 
+/* store the root path in an a variable for easy access */
 var contentPath = 'public';
+
 /* ===============================================
  * GULP TASK DEV
  * =============================================== */
+
 gulp.task('sass', function() {
     return gulp.src(contentPath + '/sass/style.scss')
     	.pipe(plugins.plumber(plumberErrorHandler))
@@ -37,6 +47,8 @@ gulp.task('default', ['sass', 'watch']);
 
 /* ===============================================
  * GULP TASK PROD
+ * These tasks below will create a dist folder
+ * which contains the final files only
  * =============================================== */
 
 gulp.task('sass-prod', function() {

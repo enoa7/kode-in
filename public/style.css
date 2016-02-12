@@ -5766,5 +5766,6 @@ button.close {
 html, body {
   background: #1a459a; }
 
-#kodein-logo {
-  fill: #fff; }
+.site-logo svg {
+  fill: #fff;
+  width: 600px; }
