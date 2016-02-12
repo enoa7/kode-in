@@ -1,6 +1,8 @@
 html,
 body {
     background: $color__background-body;
+    height: 100%;
+    font-family: gotham-med;
 }
 
 .site-content {
@@ -13,14 +15,21 @@ body {
         text-align: center;
         @include spacepad(10px);
         > .title {
-        	margin: 0;
-        	font-family: gotham-med;
+            margin: 0;
         }
     }
 }
 
 .site-footer {
-	.copyright {
-		text-align: center;
-	}
+
+	/* push site-footer to the bottom */
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+
+    .copyright {
+        text-align: center;
+        color: #fff;
+        @include spacepad(15px);
+    }
 }

@@ -18,7 +18,7 @@
 <div class="site-footer">
 	<div class="container">
 		<div class="copyright">
-			Copyright Kode-In 2016
+			<i class="fa fa-copyright"></i> Copyright Kode-In 2016
 		</div>	
 	</div>
 </div>
