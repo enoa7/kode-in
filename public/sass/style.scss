@@ -8,15 +8,15 @@
 @import 'mixin/mixins-master';
 
 /*--------------------------------------------------------------
-# import variables
---------------------------------------------------------------*/
-@import 'variables-site/variables-site';
-
-/*--------------------------------------------------------------
 # import vendors css
 --------------------------------------------------------------*/
 @import '../../node_modules/bootstrap-sass/assets/stylesheets/bootstrap';
 @import '../../node_modules/font-awesome/scss/font-awesome';
+
+/*--------------------------------------------------------------
+# import variables
+--------------------------------------------------------------*/
+@import 'variables-site/variables-site';
 
 /*--------------------------------------------------------------
 # import navigation

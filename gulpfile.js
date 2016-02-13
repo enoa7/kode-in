@@ -52,14 +52,12 @@ gulp.task('default', ['sass', 'watch']);
  * =============================================== */
 
 gulp.task('sass-prod', function() {
-    return gulp.src('*/sass/style.scss')
-    	.pipe(plugins.sourcemaps.init())
+    return gulp.src(contentPath + '/sass/style.scss')
         .pipe(plugins.sass())
         .pipe(plugins.autoprefixer('last 2 version', 'safari 5', 'ie 8', 'ie 9', 'opera 12.1', 'ios 6', 'android 4'))
         .pipe(plugins.cssnano())
         .pipe(plugins.rename({suffix: ".min"}))
-        .pipe(plugins.sourcemaps.write("./"))
-        .pipe(gulp.dest('*/dist/'))
+        .pipe(gulp.dest('dist'))
 });
 
 gulp.task('prod', ['sass-prod']);

@@ -1,14 +1,60 @@
+@import url(https://fonts.googleapis.com/css?family=Montserrat);
 $font__main: sans-serif;
-$font__code: Monaco, Consolas, "Andale Mono", "DejaVu Sans Mono", monospace;
-$font__pre: "Courier 10 Pitch", Courier, monospace;
+$font__code: Monaco,
+Consolas,
+"Andale Mono",
+"DejaVu Sans Mono",
+monospace;
+$font__pre: "Courier 10 Pitch",
+Courier,
+monospace;
 $font__line-height-body: 1.5;
 $font__line-height-pre: 1.6;
 
 /* 
  * import all the necessary font with font-face mixin
  */
-@include font-face(gotham-med, '../fonts/gotham-medium');
-@include font-face(gotham-light, '../fonts/gotham-light');
-@include font-face(gotham-bold, '../fonts/gotham-bold');
-@include font-face(gotham-thin, '../fonts/gotham-thin');
-@include font-face(gotham, '../fonts/gotham-book');
+
+@include font-face(gotham-med, 'fonts/gotham-medium');
+@include font-face(gotham-light, 'fonts/gotham-light');
+@include font-face(gotham-bold, 'fonts/gotham-bold');
+@include font-face(gotham-thin, 'fonts/gotham-thin');
+@include font-face(gotham, 'fonts/gotham-book');
+$font-size-base: 62.5%; // override bootstrap font size(?)
+body,
+html {
+    font-size: $font-size-base;
+}
+
+@include breakpoint('xs') {
+    h1,
+    .h1 {
+        font-size: 3.6em;
+        /* equal to 36px */
+    }
+    h2,
+    .h2 {
+        font-size: 3.0em;
+        /* equal to 30px */
+    }
+    h3,
+    .h3 {
+        font-size: 2.4em;
+        /* equal to 24px */
+    }
+    h4,
+    .h4 {
+        font-size: 1.8em;
+        /* equal to 18px */
+    }
+    h5,
+    .h5 {
+        font-size: 1.4em;
+        /* equal to 14px */
+    }
+    h6,
+    .h6 {
+        font-size: 1.2em;
+        /* equal to 12px */
+    }
+}

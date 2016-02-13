@@ -2,7 +2,7 @@ html,
 body {
     background: $color__background-body;
     height: 100%;
-    font-family: gotham-med;
+    font-family: 'Montserrat', sans-serif;
 }
 
 .site-content {
@@ -21,12 +21,10 @@ body {
 }
 
 .site-footer {
-
-	/* push site-footer to the bottom */
+    /* push site-footer to the bottom */
     position: absolute;
     bottom: 0;
     width: 100%;
-
     .copyright {
         text-align: center;
         color: #fff;

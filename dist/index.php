@@ -6,7 +6,7 @@
 <div class="site-page underconstruction">
 	<div class="container">
 		<div class="site-logo">
-		    <?php echo file_get_contents('img/kodein-logo.svg'); ?>
+		    <?php echo file_get_contents('./img/kodein-logo.svg'); ?>
 		</div>
 		<div class="site-content">
 			<div class="custom-container">
